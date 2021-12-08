@@ -40,6 +40,6 @@ def parse_search_phrase(allowed_fields, search_phrase):
         else:
             return JsonResponse({'status': 'Fail', 'message': 'Data not found.'})
     else:
-        return JsonResponse("No, allowed fields does not matched")
+        return JsonResponse({'status': 'Fail', 'message': "No, allowed fields does not matched"})
 
 # Create your views here.
