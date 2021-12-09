@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from filter_app.views import index
+from filter_app.views import cursor_data,raw_data
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='filter-api'),
+    path('cursor-data/', cursor_data, name='cursor_data'),
+    path('raw-data/', raw_data, name='raw_data'),
 ]
