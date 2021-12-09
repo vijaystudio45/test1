@@ -56,7 +56,7 @@ def search_phrase_method(allowed_fields, search_phrase):
         
     matchedFields = all(item in dbFieldsList for item in allowed_fields)
     if matchedFields is True:
-        string = re.sub("[()]", "", search_phrase)
+        string = search_phrase
         string = string.replace("eq", "=", )
         string = string.replace("gt", ">")
         string = string.replace("lt", "<")
