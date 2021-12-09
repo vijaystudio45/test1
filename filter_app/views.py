@@ -39,7 +39,11 @@ def raw_data(request):
         mapped = list(zip(columns, finalData))
         dataFinal.append(dict(mapped))
     if len(dataFinal) != 0:
-        return HttpResponse(dataFinal)
+        data = {
+            'status': 'success',
+            'data': dataFinal
+        }
+        return JsonResponse(data)
     else:
         return JsonResponse({'status': 'Fail', 'message': "Data not found"})
 
